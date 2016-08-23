@@ -3,23 +3,7 @@ body {
   font-family: 'Slabo 27px', serif;
   background-color: #FDFFF7;
   font-size: 2em;
-}
-
-#show-contact, .address-book {
-  display: none;
-}
-
-.contact {
-  cursor: pointer;
   color: #22223B;
-}
-
-.contact:hover {
-  text-decoration: underline;
-}
-
-.glyphicon {
-  padding-right: 5px;
 }
 
 .page-header {
@@ -27,21 +11,59 @@ body {
   color: #2081C3;
 }
 
-#show-contact h2, .title {
-  color: #78D5D7;
-}
+/* customize form */
 
-.address-book {
-  margin-top: 20px;
+.custom-title {
+  font-variant: small-caps;
+  font-size: 2em;
 }
 
 .btn {
-  background-color: #FDFFF7;
   border-color: #22223B;
-  color: #22223B;
 }
 
-.panel-default > .panel-heading {
+.btn-main {
+  background-color: #22223B;
+  border-color: #22223B;
+  color: #FDFFF7;
+}
+
+.btn-main:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.address-type {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#add-address {
+  margin-bottom: 10px;
+}
+
+.separator {
+    height: 1px;
+    width:100%;
+    display:block;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.form-control {
+  border-color: #22223B;
+  background-color: #FDFFF7;
+}
+
+/*Display contacts list*/
+
+.address-book {
+  margin-top: 40px;
+}
+
+#custom-heading {
   color: #FDFFF7;
   background-color: #21897E;
   border-color: #78D5D7;
@@ -53,6 +75,59 @@ body {
   background-color: #78D5D7;
 }
 
-#add-address {
+.img-icon {
+  height: 50px;
+}
+
+#contacts dt {
+  width: 70px;
+}
+
+#contacts dd {
+  margin-left: 20px;
   margin-bottom: 10px;
+}
+
+/*Hide contact display sections */
+
+#show-contact, .address-book {
+  display: none;
+}
+
+/*Make contact name clickable*/
+
+.contact {
+  cursor: pointer;
+  color: #02025b;
+  font-size: 30px;
+}
+
+.contact:hover {
+  text-decoration: underline;
+}
+
+/*Display contact details*/
+
+.glyphicon {
+  padding-right: 5px;
+}
+
+#show-contact h2 {
+  color: #78D5D7;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.title {
+  color: #78D5D7;
+}
+
+#addresses dd {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+#addresses dt {
+  width: 30px;
 }

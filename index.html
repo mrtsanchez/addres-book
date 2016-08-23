@@ -20,31 +20,32 @@
 
       <div class="row">
         <div class="col-md-6">
-          <h2>Add a contact:</h2>
+          <h1 class="custom-title">Add a contact:</h1>
           <form id="new-contact">
             <div class="form-group">
               <label for="new-first-name">First name</label>
-              <input type="text" class="form-control" id="new-first-name">
+              <input type="text" class="form-control" id="new-first-name" required>
             </div>
             <div class="form-group">
               <label for="new-last-name">Last name</label>
-              <input type="text" class="form-control" id="new-last-name">
+              <input type="text" class="form-control" id="new-last-name" required>
             </div>
             <div class="form-group">
-              <label for="new-email">email</label>
+              <label for="new-picture">Picture (paste URL)</label>
+              <input type="text" class="form-control" id="new-picture">
+            </div>
+            <h2>Contact Details:</h2>
+            <div class="form-group">
+              <label for="new-email">Email</label>
               <input type="email" class="form-control" id="new-email">
             </div>
             <div class="form-group">
-              <label for="new-phone">phone</label>
+              <label for="new-phone">Phone</label>
               <input type="number" class="form-control" id="new-phone">
             </div>
-            <div class="form-group">
-              <label for="new-picture">Picture (URL)</label>
-              <input type="text" class="form-control" id="new-picture">
-            </div>
             <div id="new-addresses">
-              <h3>Address:</h3>
-             <div class="new-address">
+              <h2>Address:</h2>
+             <div class="address new-address main-address">
                <div class="form-group">
                  <label for="new-street">Street</label>
                  <input type="text" class="form-control new-street">
@@ -57,11 +58,19 @@
                  <label for="new-state">State</label>
                  <input type="text" class="form-control new-state">
                </div>
+               <div class="address-type">
+               <label class="radio-inline">
+                <input type="radio" value="home"> Home Address
+               </label>
+               <label class="radio-inline">
+                <input type="radio" value="work"> Work Address
+               </label>
+               </div>
              </div>
            </div>
             <span class="btn" id="add-address">Another address</span>
 
-            <button type="submit" class="btn btn-lg btn-block">Add Contact</button>
+            <button type="submit" class="btn btn-lg btn-block btn-main">Add Contact</button>
           </form>
         </div>
         <div class="col-md-1">
@@ -72,14 +81,14 @@
         <div class="col-md-5">
           <div id="show-contact">
             <h2></h2>
-            <p>First name: <span class="first-name" class="title"></span></p>
-            <p>Last name: <span class="last-name" class="title"></span></p>
+            <p><span class="title">First name: </span><span class="first-name"></span></p>
+            <p><span class="title">Last name: </span><span class="last-name"></span></p>
+            <br>
             <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><span class="email"></span></p>
             <p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><span class="phone"></span></p>
-            <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span></p>
-            <ul id="addresses">
-
-            </ul>
+            <p><span class="title">Address: </span></p>
+            <dl id="addresses" class="dl-horizontal">
+            </dl>
             <span class="picture"></span>
           </div>
         </div>
@@ -90,13 +99,13 @@
       <div class="row">
         <div class="col-md-12">
           <div class="address-book panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Contacts:</h3>
+            <div class="panel-heading" id="custom-heading">
+              <h1>Contacts:</h1>
             </div>
             <div class="panel-body">
               <div class="contacts-list">
-              <ul id="contacts">
-              </ul>
+              <dl id="contacts" class="dl-horizontal">
+              </dl>
               </div>
             </div>
           </div>
