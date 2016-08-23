@@ -116,6 +116,14 @@ $(document).ready(function() {
 
         $(".picture").append("<img src='" + newContact.picture + "' class='img-responsive' />");
 
+        $(".glyphicon-briefcase").hover(
+          function() {
+            $("dl#addresses").append($("<span>This is the work address</span>"));
+          }, function() {
+            $("dl#addresses").find("span:last").remove();
+          }
+        );
+
       });
 
       resetFields();
