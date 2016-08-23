@@ -1,17 +1,54 @@
 body {
   margin-top: 30px;
   font-family: 'Slabo 27px', serif;
+  background-color: #FDFFF7;
+  font-size: 2em;
 }
 
-#show-contact {
+#show-contact, .address-book {
   display: none;
 }
 
 .contact {
   cursor: pointer;
-  color: #0088cc;
+  color: #22223B;
 }
 
 .contact:hover {
   text-decoration: underline;
+}
+
+.glyphicon {
+  padding-right: 5px;
+}
+
+.page-header {
+  font-family: 'Londrina Outline', cursive;
+  color: #2081C3;
+}
+
+#show-contact h2, .title {
+  color: #78D5D7;
+}
+
+.address-book {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #FDFFF7;
+  border-color: #22223B;
+  color: #22223B;
+}
+
+.panel-default > .panel-heading {
+  color: #FDFFF7;
+  background-color: #21897E;
+  border-color: #78D5D7;
+  font-variant: small-caps;
+  font-size: 3em;
+}
+
+.panel-body {
+  background-color: #78D5D7;
 }
