@@ -52,3 +52,7 @@ body {
 .panel-body {
   background-color: #78D5D7;
 }
+
+#add-address {
+  margin-bottom: 10px;
+}
